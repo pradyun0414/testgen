@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.decatestgen.FirstScreenController">
+   <children>
+      <Rectangle fill="#0f4873" height="1080.0" stroke="TRANSPARENT" strokeType="INSIDE" width="424.0" />
+      <Rectangle fill="#2a71b9" height="304.0" layoutX="424.0" layoutY="200.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1496.0" />
+      <Button layoutY="300.0" mnemonicParsing="false" onAction="#instructionSwitch" prefHeight="104.0" prefWidth="424.0" text="How To Use" />
+      <Button layoutY="450.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="424.0" text="Practice Resources" />
+      <Button layoutY="600.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="424.0" text="Contact" />
+      <Button layoutX="672.0" layoutY="700.0" mnemonicParsing="false" onAction="#settingsSwitch" prefHeight="104.0" prefWidth="400.0" text="Generate Test" />
+      <Button layoutX="1252.0" layoutY="700.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="420.0" text="Quick Study" />
+      <Rectangle fill="#2a71b9" height="95.0" layoutY="990.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1920.0" />
+      <Label layoutX="624.0" layoutY="316.0" text="Reedy DECA Test Generator" textFill="#fcf7f8">
+         <font>
+            <Font name="MS Reference Specialty" size="53.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="106.0" fitWidth="106.0" layoutX="478.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@./images/WhiteDECADiamond.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

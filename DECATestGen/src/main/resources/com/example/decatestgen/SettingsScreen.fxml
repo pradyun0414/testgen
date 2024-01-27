@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.QuadCurve?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="settingsAnchor" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.decatestgen.SettingsController">
+   <children>
+      <Rectangle fill="#2a71b9" height="95.0" layoutY="985.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1920.0" />
+      <Label layoutX="276.0" layoutY="150.0" text="Test Cluster" textFill="#0f4873">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Separator layoutX="276.0" layoutY="195.0" prefHeight="0.0" prefWidth="776.0" />
+      <Label layoutX="276.0" layoutY="380.0" text="Question Difficulty (Select Up To 3)" textFill="#0f4873">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Separator layoutX="276.0" layoutY="425.0" prefHeight="0.0" prefWidth="776.0" />
+      <Label layoutX="276.0" layoutY="540.0" text="Test Blueprint (Question Breakdown)" textFill="#0f4873">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Separator layoutX="276.0" layoutY="585.0" prefHeight="0.0" prefWidth="776.0" />
+      <Label layoutX="276.0" layoutY="700.0" text="Test Length" textFill="#0f4873">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Separator layoutX="276.0" layoutY="745.0" prefHeight="0.0" prefWidth="776.0" />
+      <CheckBox fx:id="cb1" layoutX="276.0" layoutY="478.0" mnemonicParsing="false" text="District">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="cb2" layoutX="426.0" layoutY="478.0" mnemonicParsing="false" text="State">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="cb3" layoutX="576.0" layoutY="478.0" mnemonicParsing="false" text="ICDC">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <RadioButton fx:id="b1" layoutX="276.0" layoutY="643.0" mnemonicParsing="false" onAction="#setBlueprintDistrict" text="District">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="toggle1" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="b2" layoutX="426.0" layoutY="643.0" mnemonicParsing="false" onAction="#setBlueprintState" text="State" toggleGroup="$toggle1">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="b3" layoutX="576.0" layoutY="643.0" mnemonicParsing="false" onAction="#setBlueprintICDC" text="ICDC" toggleGroup="$toggle1">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="l1" layoutX="276.0" layoutY="803.0" mnemonicParsing="false" onAction="#setTestLength50" text="50 Questions">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="toggleLength" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="l2" layoutX="426.0" layoutY="803.0" mnemonicParsing="false" onAction="#setTestLength100" text="100 Questions" toggleGroup="$toggleLength">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="r1" layoutX="276.0" layoutY="220.0" mnemonicParsing="false" text="BAC">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="toggletest" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="r2" layoutX="276.0" layoutY="270.0" mnemonicParsing="false" text="BMA" toggleGroup="$toggletest">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="r3" layoutX="276.0" layoutY="320.0" mnemonicParsing="false" text="FIN" toggleGroup="$toggletest">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="r4" layoutX="426.0" layoutY="220.0" mnemonicParsing="false" text="MKT" toggleGroup="$toggletest">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="r5" layoutX="426.0" layoutY="270.0" mnemonicParsing="false" text="HT" toggleGroup="$toggletest">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="r6" layoutX="426.0" layoutY="320.0" mnemonicParsing="false" text="ENT" toggleGroup="$toggletest">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </RadioButton>
+      <Button layoutX="276.0" layoutY="876.0" mnemonicParsing="false" onAction="#loadTest" prefHeight="44.0" prefWidth="196.0" text="Load Test" />
+      <QuadCurve controlX="-217.0" controlY="-955.0" endX="180.0" fill="#0f4873" layoutX="50.0" layoutY="985.0" startX="-50.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" />
+      <Button mnemonicParsing="false" onAction="#homeSwitch" prefHeight="63.0" prefWidth="115.0" text="Back" />
+   </children>
+</AnchorPane>
